@@ -8,10 +8,9 @@ import { players } from './players';
 
 ReactDOM.render(
               <div>
-                <Card id={players[0].id} name={players[0].name} position={players[0].position}/>
-                <Card id={players[1].id} name={players[1].name} position={players[1].position}/>
-                <Card id={players[2].id} name={players[2].name} position={players[2].position}/>
-                <Card id={players[3].id} name={players[3].name} position={players[3].position}/>
+                <Card id={players[0].id} name={players[0].name} position={players[0].position} image={players[0].image}/>
+                <Card id={players[1].id} name={players[1].name} position={players[1].position} image={players[1].image}/>
+                <Card id={players[2].id} name={players[2].name} position={players[2].position} image={players[2].image}/>
               </div>
 ,document.getElementById('root'));
 
