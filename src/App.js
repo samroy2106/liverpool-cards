@@ -8,9 +8,13 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      players: players,
+      players: [],
       searchfield: ''
     }
+  }
+
+  componentDidMount() {
+    this.setState({ players: players});
   }
 
   onSearchChange = (event) => {
