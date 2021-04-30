@@ -3,6 +3,7 @@ import CardList from '../components/CardList';
 import Searchbox from '../components/Searchbox';
 import { players } from './players';
 import Scroll from '../components/Scroll';
+import ErrorBoundry from '../components/ErrorBoundry';
 import './App.css';
 
 class App extends React.Component {
@@ -32,7 +33,9 @@ class App extends React.Component {
         <h1 className='f1'>Liverpool Squad</h1>
         <Searchbox searchChange={this.onSearchChange}/>
         <Scroll>
-          <CardList players={filteredPlayers}/>
+          <ErrorBoundry>
+            <CardList players={filteredPlayers}/>
+          </ErrorBoundry>
         </Scroll>
       </div>
     );
